@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState , useEffect } from 'react';
 import "./loginApp.css";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
@@ -7,11 +8,11 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function loginApp() {
 
-    let toggleFunction=(event)=>{
-        
+
+
+    let toggleFunction=(event)=>{ 
         let btnToggle = document.querySelector('#windowExternal')
         let btn = document.querySelector('.toggleDivMoverbtn')
-
         if (btnToggle.getAttribute('toggle') === 'left') {
                 btnToggle.classList.remove('windowExternal-left')
                 btnToggle.classList.add('windowExternal-right')
@@ -23,8 +24,6 @@ export default function loginApp() {
              btn.innerHTML='sign in'
             btnToggle.setAttribute('toggle' , 'left')
         }
-
-
     }
 
   return (
