@@ -1,0 +1,471 @@
+.ParentLogin{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: url(./imageSrc//wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.orgParentLogin{
+    width: 900px;
+    height: 550px;
+    backdrop-filter: blur(3px);
+    border-radius: 35px;
+    box-shadow:  0 1px 4px rgb(255, 230, 0);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.loginDiv , .registerDiv{
+    width: 49.7%;
+    background-color: rgba(0, 136, 255, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px;
+}
+.titlrLoginParent{
+    font-weight: bold;
+    color: rgb(55, 55, 55);
+}
+    .spanTextBu{
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px white;
+        transition: all 0.5s;
+
+    }
+    .spanTextBu:hover{
+        text-shadow: 0 0 10px rgb(255, 149, 0);
+        transition: all 0.5s;
+    }
+.iconeSharedProgram{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+    .linkIcon{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+        .icoTtelegram , .iconGit , .iconWhatsapp{
+            color: rgb(89, 89, 89);
+            transition: all 0.5s;
+            margin-left: 10px;
+            margin-top: 10px;
+            background-color:rgba(255, 255, 255, 0.298);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.298);
+        }
+        .icoTtelegram:hover,.iconGit:hover,.iconWhatsapp:hover {
+            border: 2px solid rgb(255, 149, 0);
+            background-color:rgb(255, 255, 255);
+            color: rgb(255, 149, 0);
+            transition: all 0.5s;
+        }
+
+.parentInputeLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .inputeEmail , .inputePassword , .inputeconfirem{
+        width: 370px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 5px gray;
+        outline: none;
+        margin: 10px 0 ;
+        transition: all 0.5s;
+        font-size: 16px;
+        padding-left: 15px;
+        font-family:vazir;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .inputeEmail::placeholder , .inputePassword::placeholder , .inputeconfirem::placeholder{
+        font-family:vazir;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgb(142, 142, 142);
+    }
+    .inputeEmail:focus , .inputePassword:focus , .inputeconfirem:focus{
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+        transition: all 0.5s;
+    }
+.btn-forgotPassword{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    .forgotPass{
+        font-weight: bold;
+        font-size: 14px;
+        font-family: vazir;
+        transition: all 0.5s;
+    }
+    .forgotPass:hover{
+        text-shadow: 0 0 1px rgb(255, 255, 255);
+        text-decoration:underline;
+        transition: all 0.5s;
+    }
+    .btnLogin , .btnLogin1{
+        width: 200px;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-family: vazir;
+        font-size: 17px;
+        transition: all 0.5s;
+        margin-top: 20px;
+
+    }
+    .btnLogin1{
+        margin-top: 30px;
+        z-index: 2;
+    }
+    .btnLogin:hover , .btnLogin1:hover{
+        box-shadow: 0 0 10px white;
+        border-radius:20px;
+        transition: all 0.5s;
+        
+    }
+    
+    .windowExternal-left{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color: #ffffff;
+        border-top-left-radius:35px;
+        border-bottom-left-radius: 35px;
+        border-top-right-radius:150px;
+        border-bottom-right-radius: 150px;
+        transition: all 0.5s;
+        margin-left:0px;
+        z-index: 5;
+    }    
+    .windowExternal-right{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color: #ffffff;
+        border-top-left-radius:150px ;
+        border-bottom-left-radius:150px ;
+        border-top-right-radius:35px;
+        border-bottom-right-radius: 35px;
+        transition: all 0.5s;
+        margin-left:450px;
+        z-index: 5;
+    }
+
+.toggleDivMoverbtn{
+    position: absolute;
+    border: none;
+    outline: none;
+    background-color: #059300;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: vazir;
+    font-size: large;
+    width: 100px;
+    height: 35px;
+    left: 102px;
+    bottom: 347px;
+    border-radius: 20px;
+    rotate: 296deg;
+}
+.imgPumkin1{
+    width: 50px;
+    position: absolute;
+    right: 199px;
+    bottom: 115px;
+    z-index: 1 ;
+    rotate: 20deg;
+}
+.imgPumkin2{
+    width: 40px;
+    position: absolute;
+    z-index: 1 ;
+    left: 260px;
+    top: 38px;
+    rotate: 19deg;
+}
+.imgPumkin3{
+    width: 200px;
+    position: absolute;
+    left: 110px;
+    bottom: 150px;
+
+}
+
+@media (min-width:1000px) and (max-width:1450px) {
+    .ParentLogin{
+        background-size: 150%;
+    }
+}
+@media (min-width:778px) and (max-width:999px) {
+    .ParentLogin{
+        background-size: 200%;
+    }
+}
+@media (min-width:570px) and (max-width:777px) {
+    .ParentLogin{
+        background: url(./imageSrc/9e33013155ba0bc8e16aab910c4a2356.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+@media (min-width:270px) and (max-width:569px) {
+    .ParentLogin{
+        background: url(./imageSrc/9e33013155ba0bc8e16aab910c4a2356.jpg);
+        background-size: 200%;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and (max-width:269px) {
+    .ParentLogin{
+        background: url(./imageSrc/9e33013155ba0bc8e16aab910c4a2356.jpg);
+        background-size: 250%;
+        background-repeat: no-repeat;
+    }
+    
+}
+@media (min-width:745px) and (max-width:912px) {
+    .orgParentLogin{
+        width: 700px;
+        height: 450px;
+    }
+}
+@media (min-width:745px) and (max-width:912px) {
+    .orgParentLogin{
+        width: 700px;
+        height: 450px;
+    }
+    .inputeEmail , .inputePassword , .inputeconfirem{
+        width: 300px;
+        height: 30px;
+        margin: 7px 0 ;
+        padding-left: 10px;
+
+    }
+    .windowExternal-left{
+        width: 50%;
+        height: 100%;
+        border-top-left-radius:35px;
+        border-bottom-left-radius: 35px;
+        border-top-right-radius:150px;
+        border-bottom-right-radius: 150px;
+        transition: all 0.5s;
+        margin-left:0px;
+        z-index: 5;
+    }    
+    .windowExternal-right{
+        width: 50%;
+        height: 100%;
+        border-top-left-radius:150px ;
+        border-bottom-left-radius:150px ;
+        border-top-right-radius:35px;
+        border-bottom-right-radius: 35px;
+        transition: all 0.5s;
+        margin-left:50%;
+        z-index: 5;
+    }
+    .imgPumkin1{
+        width: 40px;
+        right: 156px;
+        bottom: 94px;
+        z-index: 1 ;
+        rotate: 20deg;
+    }
+    .imgPumkin2{
+        width: 30px;
+        z-index: 1 ;
+        left: 212px;
+        top: 10px;
+        rotate: 19deg;
+    }
+    .imgPumkin3{
+        width: 120px;
+        left: 110px;
+        bottom: 160px;
+    }
+    .toggleDivMoverbtn {
+        font-size: 15px;
+        width: 69px;
+        height: 30px;
+        left: 100px;
+        bottom: 280px;
+        border-radius: 20px;
+    }
+} 
+@media (min-width:460px) and (max-width:744px) {
+    .orgParentLogin{
+        width:450px ;
+        height: 700px;
+        border-radius: 35px;
+        box-shadow:  0 1px 4px rgb(255, 230, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .windowExternal-left{
+        width: 100%;
+        height: 50%;
+        border-top-left-radius:35px;
+        border-bottom-left-radius:150px ;
+        border-top-right-radius:35px;
+        border-bottom-right-radius: 150px;
+        transition: all 0.5s;
+        margin-top:0px;
+        margin-left: 0px;
+        z-index: 5;
+    }    
+    .windowExternal-right{
+        width: 100%;
+        height: 50%;
+        border-top-left-radius:150px;
+        border-bottom-left-radius:35px ;
+        border-top-right-radius:150px;
+        border-bottom-right-radius: 35px;
+        transition: all 0.5s;
+        margin-top:350px;
+        margin-left: 0px;
+        z-index: 5;
+    }
+    .imgPumkin1{
+        width: 40px;
+        position: absolute;
+        right: 156px;
+        top: 50px;
+        z-index: 1 ;
+        rotate: 0deg;
+    }
+    .inputeEmail , .inputePassword , .inputeconfirem{
+        z-index: 2;
+    }
+    .imgPumkin2{
+        display: none;
+    }
+    .imgPumkin3{
+        width: 120px;
+        left: 150px;
+        bottom: 120px;
+    }
+    .loginDiv , .registerDiv{
+        height: 49.7%;
+        background-color: rgba(0, 136, 255, 0);
+    }
+    .linkIcon{
+        display: none;
+    }
+    .titlrLoginParent{
+        margin-top: 10px;
+        margin-bottom: -35px;
+    }
+    .btnLogin{
+        margin-top: 0px;
+        margin-bottom:-110px ;
+    }
+    .toggleDivMoverbtn{
+        font-size: 13px;
+        width: 70px;
+        height: 26px;
+        left: 145px;
+        bottom: 245px;
+
+    }
+}
+@media (min-width:200px) and (max-width:460px) {
+    .orgParentLogin{
+        width:450px ;
+        height: 700px;
+        flex-direction: column;
+    }
+    .windowExternal-left{
+        display: none;
+    }    
+    .windowExternal-right{
+        display: none;
+    }
+    .imgPumkin1{
+        width: 40px;
+        right: 115px;
+        top: 312px;
+        z-index: 1 ;
+        rotate: 0deg;
+    }
+    .inputeEmail , .inputePassword , .inputeconfirem{
+        z-index: 2;
+    }
+    .imgPumkin2{
+        display: none;
+    }
+    .imgPumkin3{
+        display: none;
+    }
+    .loginDiv{
+        border-bottom: solid 2px gray;
+        padding-bottom: 70px;
+    }
+    .registerDiv{
+        margin-top: -30px;
+    }
+    .loginDiv , .registerDiv{
+        height: 50%;
+        background-color: rgba(0, 136, 255, 0);
+    }
+    .linkIcon{
+        display: none;
+    }
+    .titlrLoginParent{
+        margin-top: 10px;
+        margin-bottom: -35px;
+    }
+    .btnLogin{
+        margin-top: 0px;
+        margin-bottom:-110px ;
+    }
+    .toggleDivMoverbtn{
+        display: none;
+    }
+    .orgParentLogin{
+        width:270px ;
+        height: 700px;
+    }
+    .inputeEmail , .inputePassword , .inputeconfirem{
+        width: 230px;
+        height: 30px;
+        border-radius: 7px;
+        padding-left: 7px;
+        font-size: 11px;
+    }
+    .inputeEmail::placeholder , .inputePassword::placeholder , .inputeconfirem::placeholder{
+        font-size: 10px;
+    }
+    .registerDiv>h1{
+        margin-top: -20px;
+    }
+
+}
+    
