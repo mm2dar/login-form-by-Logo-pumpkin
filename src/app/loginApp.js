@@ -28,7 +28,7 @@ export default function loginApp() {
     }
 
   return (
-    <div className='ParentLogin'>
+    <form className='ParentLogin'>
         <div className='orgParentLogin'>
         {/* //////two by two////// */}
             <div className='windowExternal-left' id='windowExternal' toggle='left'>
@@ -76,6 +76,6 @@ export default function loginApp() {
             </div>
         {/* //////two by two////// */}
         </div>
-    </div>
+    </form>
   )
 }
