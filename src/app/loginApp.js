@@ -78,13 +78,16 @@ export default function LoginApp() {
         useEffect(()=>{  
             if (inputePasswordConfirmRegister) {
                     if (PasswordRegister==ConfirmPassword) {
-                        inputePasswordConfirmRegister.style.color = 'green'
-                        inputePasswordRegister.style.color = 'green'
-                        inputePasswordRegister.style.textShadow = 'none'
-                        console.log('madar');
+                        if (PasswordRegister.length>8) {
+                            inputePasswordConfirmRegister.style.color = 'green'
+                            inputePasswordRegister.style.color = 'green'
+                            inputePasswordRegister.style.textShadow = 'none'
+                        }
+
                     }else{
-                        inputePasswordRegister.style.textShadow = ' 0 0 2px red'
-                        inputePasswordRegister.style.color = 'red'
+                            inputePasswordRegister.style.textShadow = ' 0 0 2px red'
+                            inputePasswordRegister.style.color = 'red'
+
                         inputePasswordConfirmRegister.style.color = 'red'
 
                     }
@@ -95,7 +98,7 @@ export default function LoginApp() {
         },[ConfirmPassword])
 
     ///////////////////// js scriptlogin
-        
+
 
     let toggleFunction=(event)=>{ 
         let btnToggle = document.querySelector('#windowExternal')
@@ -134,8 +137,8 @@ export default function LoginApp() {
                     <a href="#" className="linkIcon"><div className='iconWhatsapp'><FaWhatsapp size={25}/></div></a>
                 </div>
                 <div className='parentInputeLogin'>
-                    <input type="text" value={EmailLogin} onChange={(event)=>setEmailLogin(event.target.value)} id='inputeEmailIDLogin' className='inputeEmail' placeholder='email' />
-                    <input type="text" value={PasswordLogin} onChange={(event)=>setPasswordLogin(event.target.value)} maxLength={13} id='inputePasswordIDLogin' className='inputePassword' placeholder='password'/>
+                    <input autocomplete="off" type="text" value={EmailLogin} onChange={(event)=>setEmailLogin(event.target.value)} id='inputeEmailIDLogin' className='inputeEmail' placeholder='email' />
+                    <input autocomplete="off" type="text" value={PasswordLogin} onChange={(event)=>setPasswordLogin(event.target.value)} maxLength={13} id='inputePasswordIDLogin' className='inputePassword' placeholder='password'/>
                 </div>
                 <div className='btn-forgotPassword'>
                     <p className='forgotPass'>forget ypur password ?</p>
@@ -152,9 +155,9 @@ export default function LoginApp() {
                     <a href="#" className="linkIcon"><div className='iconWhatsapp'><FaWhatsapp size={25}/></div></a>
                 </div>
                 <div className='parentInputeLogin'>
-                    <input type="text" value={EmailRegister} onChange={(event)=>setEmailRegister(event.target.value)} id='inputeEmailIDRegister' className='inputeEmail' placeholder='email' />
-                    <input type="text" value={PasswordRegister} onChange={(event)=>setPasswordRegister(event.target.value)} id='inputePasswordIDRegister' className='inputePassword' placeholder='password'/>
-                    <input type="text" value={ConfirmPassword} onChange={(event)=>setConfirmPassword(event.target.value)} id='inputeinputeconfiremIDRegister' className='inputeconfirem' placeholder='confirem password'/>
+                    <input autocomplete="off" type="text" value={EmailRegister} onChange={(event)=>setEmailRegister(event.target.value)} id='inputeEmailIDRegister' className='inputeEmail' placeholder='email' />
+                    <input autocomplete="off" type="text" value={PasswordRegister} onChange={(event)=>setPasswordRegister(event.target.value)} id='inputePasswordIDRegister' className='inputePassword' placeholder='password'/>
+                    <input autocomplete="off" type="text" value={ConfirmPassword} onChange={(event)=>setConfirmPassword(event.target.value)} id='inputeinputeconfiremIDRegister' className='inputeconfirem' placeholder='confirem password'/>
                 </div>
                 <div className='btn-forgotPassword'>
                     <button className='btnLogin1'>Register</button>
