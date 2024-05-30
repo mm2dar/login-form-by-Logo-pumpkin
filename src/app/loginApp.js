@@ -6,9 +6,96 @@ import { FiGithub } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 
-export default function loginApp() {
+export default function LoginApp() {
 
+    ///////////////////// data center
 
+    let [EmailLogin, setEmailLogin] = useState('') 
+    let [PasswordLogin , setPasswordLogin] = useState('') 
+
+    let [EmailRegister, setEmailRegister] = useState('')
+    let [PasswordRegister , setPasswordRegister] = useState('') 
+    let [ConfirmPassword , setConfirmPassword] = useState('') 
+
+    ///////////////////// data center
+    ///////////////////// js script login
+    let emailRegex = /(\-?[a-zA-Z0-9])*@gmail.[a-z]{2,4}/g
+    let inputeEmailLogin = document.querySelector('#inputeEmailIDLogin')
+    let inputePasswordLogin = document.querySelector('#inputePasswordIDLogin')
+    let inputeEmailRegister = document.querySelector('#inputeEmailIDRegister')
+    let inputePasswordRegister = document.querySelector('#inputePasswordIDRegister')
+    let inputePasswordConfirmRegister = document.querySelector('#inputeinputeconfiremIDRegister')
+
+        useEffect(()=>{         
+            if (inputeEmailLogin) {
+                if (emailRegex.test(EmailLogin)===true) {
+                    inputeEmailLogin.style.color = 'green'
+                }else{
+                    inputeEmailLogin.style.color = 'red'
+                }
+              } else {
+                console.error('Element with id "myElement" not found');
+              }
+        },[EmailLogin])
+        useEffect(()=>{         
+            if (inputeEmailRegister) {
+                if (emailRegex.test(EmailRegister)===true) {
+                    inputeEmailRegister.style.color = 'green'
+                }else{
+                    inputeEmailRegister.style.color = 'red'
+                }
+              } else {
+                console.error('Element with id "myElement" not found');
+              }
+        },[EmailRegister])
+        useEffect(()=>{         
+            if (inputePasswordLogin) {
+                if (PasswordLogin==='') {
+                    inputePasswordRegister.style.color = 'red'
+                }else if(PasswordLogin.length<=8){
+                    inputePasswordLogin.style.color = 'red'
+                }else{
+                    inputePasswordLogin.style.color = 'green'
+                }
+              } else {
+                console.error('Element with id "myElement" not found');
+              }
+        },[PasswordLogin])
+        useEffect(()=>{    
+            if (inputePasswordRegister) {
+                if (PasswordRegister==='') {
+                    inputePasswordRegister.style.color = 'red'
+                }else if(PasswordRegister.length<=8){
+                    inputePasswordRegister.style.color = 'red'
+                }else{
+                    inputePasswordRegister.style.color = 'green'
+
+                }
+              } else {
+                console.error('Element with id "myElement" not found');
+              }
+        },[PasswordRegister])
+        useEffect(()=>{  
+            if (inputePasswordConfirmRegister) {
+                    if (PasswordRegister==ConfirmPassword) {
+                        inputePasswordConfirmRegister.style.color = 'green'
+                        inputePasswordRegister.style.color = 'green'
+                        inputePasswordRegister.style.textShadow = 'none'
+                        console.log('madar');
+                    }else{
+                        inputePasswordRegister.style.textShadow = ' 0 0 2px red'
+                        inputePasswordRegister.style.color = 'red'
+                        inputePasswordConfirmRegister.style.color = 'red'
+
+                    }
+            } else {
+              console.error('Element with id "myElement" not found');
+            }
+
+        },[ConfirmPassword])
+
+    ///////////////////// js scriptlogin
+        
 
     let toggleFunction=(event)=>{ 
         let btnToggle = document.querySelector('#windowExternal')
@@ -27,7 +114,7 @@ export default function loginApp() {
     }
 
   return (
-    <form className='ParentLogin'>
+    <div className='ParentLogin'>
         <div className='orgParentLogin'>
         {/* //////two by two////// */}
             <div className='windowExternal-left' id='windowExternal' toggle='left'>
@@ -47,8 +134,8 @@ export default function loginApp() {
                     <a href="#" className="linkIcon"><div className='iconWhatsapp'><FaWhatsapp size={25}/></div></a>
                 </div>
                 <div className='parentInputeLogin'>
-                    <input type="text" className='inputeEmail' placeholder='email' />
-                    <input type="text" className='inputePassword' placeholder='password'/>
+                    <input type="text" value={EmailLogin} onChange={(event)=>setEmailLogin(event.target.value)} id='inputeEmailIDLogin' className='inputeEmail' placeholder='email' />
+                    <input type="text" value={PasswordLogin} onChange={(event)=>setPasswordLogin(event.target.value)} maxLength={13} id='inputePasswordIDLogin' className='inputePassword' placeholder='password'/>
                 </div>
                 <div className='btn-forgotPassword'>
                     <p className='forgotPass'>forget ypur password ?</p>
@@ -65,9 +152,9 @@ export default function loginApp() {
                     <a href="#" className="linkIcon"><div className='iconWhatsapp'><FaWhatsapp size={25}/></div></a>
                 </div>
                 <div className='parentInputeLogin'>
-                    <input type="text" className='inputeEmail' placeholder='email' />
-                    <input type="text" className='inputePassword' placeholder='password'/>
-                    <input type="text" className='inputeconfirem' placeholder='confirem password'/>
+                    <input type="text" value={EmailRegister} onChange={(event)=>setEmailRegister(event.target.value)} id='inputeEmailIDRegister' className='inputeEmail' placeholder='email' />
+                    <input type="text" value={PasswordRegister} onChange={(event)=>setPasswordRegister(event.target.value)} id='inputePasswordIDRegister' className='inputePassword' placeholder='password'/>
+                    <input type="text" value={ConfirmPassword} onChange={(event)=>setConfirmPassword(event.target.value)} id='inputeinputeconfiremIDRegister' className='inputeconfirem' placeholder='confirem password'/>
                 </div>
                 <div className='btn-forgotPassword'>
                     <button className='btnLogin1'>Register</button>
@@ -75,6 +162,6 @@ export default function loginApp() {
             </div>
         {/* //////two by two////// */}
         </div>
-    </form>
+    </div>
   )
 }
